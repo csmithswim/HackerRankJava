@@ -1,29 +1,29 @@
 package com.csmithswim;
 import java.util.Scanner;
 
+//Calculate the final bill one pays when given a tax, base price of food and a calculated tip.
+
 public class Main {
 
     public static void main(String[] args) {
-        int i = 4;
-        double d = 4.0;
-        String s = "HackerRank ";
+          // Create a Scanner object to read input from stdin.
+        Scanner scanner = new Scanner(System.in);
 
-        // Create a Scanner object to read input from stdin.
-        Scanner scan = new Scanner(System.in);
-        //Declare variables
-        Integer inputInteger;
-        Double inputDouble;
-        String inputString;
+        double meal_cost = scanner.nextDouble();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
-        //Reading input from console
-        inputInteger = scan.nextInt();
-        inputDouble = scan.nextDouble();
-        scan.nextLine();
-        inputString = scan.nextLine();
+        int tip_percent = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
-        System.out.println(inputInteger+i);
-        System.out.println(inputDouble+2);
-        System.out.println(s+inputString);
+        int tax_percent = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        solve(meal_cost, tip_percent, tax_percent);
+
+        scanner.close();
+    }
+
+    static void solve(double meal_cost, int tip_percent, int tax_percent) {
 
 
     }
